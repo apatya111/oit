@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	line-height: 1.2;
+	font-size: 132%;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	background-color: #e91111;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+	background-image: url(
+%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/446716_myagkie_legkie_svetlye_1680x1050_(www.GdeFon.ru).jpg);
+	border-color: #001DFF;
+	font-style: normal;
+	font-weight: bold;
+	text-indent: 0px;
+	text-shadow: 0px 0 #000000;
+	background-image: url(%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/1617584974_37-p-fon-dlya-saita-temnii-37.jpg);
+	right: auto;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #ff3e3e;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #ff3e3e;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	color: #FFFFFF;
+	text-align: center;
+}
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+.container {
+	width: 960px;
+	background-color: #FFFFFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+/* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+header {
+	background-color: #ADB96E;
+}
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the block elements. The elements within these blocks have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the block itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the block element and place a second block element within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a block set to float right). Many times, padding can be used instead. For blocks where this rule must be broken, you should add a "display:inline" declaration to the block element's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar blocks could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the blocks around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 180px;
+	background-color: #EADCAE;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 600px;
+	float: left;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: marvel;
+	font-style: normal;
+	font-weight: 400;
+}
+aside {
+	float: left;
+	width: 180px;
+	background-color: #EADCAE;
+	padding: 10px 0;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+nav ul{
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+nav a, nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+nav a:hover, nav a:active, nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty block element as the final element following the last floated block (within the .container) if the footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+a:hover {
+	color: #ff3e3e;
+}
+a:active {
+	color: #ff3e3e;
+}
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta name="" content="">
+<meta name="keywords" content="Иванов Д.А.">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/artifika:n4:default;modern-antiqua:n4:default;marvel:n4:default;ubuntu-mono:n4:default;medula-one:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body text="#e8ff3e">
+<table width="912" border="1" align="center">
+  <tbody>
+    <tr>
+      <td width="556" height="111"><img src="изображения/Шапка.jpg" alt="" width="903" height="168" align="middle"/></td>
+    </tr>
+    <tr>
+      <td height="52"><table width="904" border="1">
+        <tbody>
+          <tr>
+            <td width="88" bgcolor="#000000"><div align="center"><a href="MAIN PAGE.html">Главная</a></div></td>
+            <td width="116" bgcolor="#000000"><div align="center"><a href="1.html">Введение</a></div></td>
+            <td width="116" bgcolor="#000000"><div align="center"><a href="2.html">Глава 1</a></div></td>
+            <td width="115" bgcolor="#000000"><div align="center"><a href="3.html">Глава 2</a></div></td>
+            <td width="141" bgcolor="#000000"><div align="center"><a href="4.html">Заключение</a></div></td>
+            <td width="288" bgcolor="#000000"><div align="center"><a href="5.html">Список источников</a></div></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+    <tr>
+      <td height="58"><p ><strong><span style="color: #FFFFFF;">ГЛАВА 1 ОРГАНИЗАЦИЯ ПОИСКА ИНФОРМАЦИИ В СЕТИ ИНТЕРНЕТ: ОБЩИЕ ПОЛОЖЕНИЯ</span></strong></p>
+    
+        <p>Поиск информации ‒ одна из самых распространенных и самых сложных задач, стоящих перед всеми пользователями сети. Сложность поиска информации в Интернете во многом определяется двумя факторами. Во-первых, в сети так много источников информации. Во-вторых, количество информации в Интернете не только огромно, но и очень динамично.</p>
+        <p>Необходимость и важность проблемы информационного поиска привела к образованию в самом Интернет целой отрасли, задача которой заключается именно в оказании помощи пользователю в его навигации в киберпространстве. Составляют эту отрасль специальные поисковые службы или сервисы. </p>
+        <p>Способы можно разделить на следующие: </p>
+        <p align="left">‒ поиск с использованием поисковых машин; </p>
+<p align="left">‒ поиск в каталогах информационных ресурсов. </p>
+<p>В целом поиск информации в сети - это достаточно специфическая и кропотливая работа, требующая определенных знаний и навыков. Для проведения поисковых работ пригодятся: знания основных информационных ресурсов и умение хорошо в них ориентироваться, практические навыки работы - это приходит со временем, хорошая зрительная память и умение быстро читать, а так же некоторые навыки аналитической работы [3]. </p>
+<p>Приступая к информационному поиску в Интернет, следует всегда помнить несколько основных моментов. Прежде всего, никакие средства навигации - каталоги или поисковые машины - не охватывают всего текущего информационного массива Интернет. По некоторым оценкам, даже такие признанные лидеры сетевого поиска как Google, отражают не более трети совокупного содержания Сети. Причина этого - постоянный колоссальный прирост объемов информации в Интернет, который, несмотря на все усилия навигационных служб, содержит огромное число белых пятен.</p>
+<p>В тоже время многие крупные сайты имеют собственную систему поиска, которая отражает весь их информационный массив. Выявив такие сервера с помощью каталогов, можно провести более детальное их обследование, использовав локальный поисковый механизм. Таким образом, для достижения наиболее полных результатов следует применять каталоги и поисковые машины в сочетании друг с другом.</p>
+<p>Существует также ряд общих требований к поисковой деятельности, соблюдение которых повышает эффективность и экономит время, затрачиваемое на разыскание данных:
+</p>
+<p align="left">‒ для поиска материалов по крайне узкой специфической тематике стоит начинать с каталогов;</p>
+<p align="left">‒ для получения более полных результатов по сложному запросу поиск рекомендуется проводить отдельно в каждой поисковой машине, поисковые системы имеют сильный разнос в отражении документов и их последовательное использование в значительной степени расширяет охват материала; </p>
+</p><p align="left">‒ при разыскании документов об отдельной стране или на конкретном языке следует отдать предпочтение национальным/региональным поисковым средствам; </p>
+</p><p align="left">‒ формировать запрос надо максимально точно, используя все возможности механизма составления запроса. Затраты времени на детальное составление поискового предписания окупаются при анализе результатов поиска. При точном формировании запроса процент информационного шума будет намного ниже. </p>
+</p><p>При систематическом обращении к поисковым средствам, необходимо постоянно следить за новостями, относящимися к поисковому сервису. В окружающем нас мире вообще, а в цифровом мире тем более, нет ничего вечного. Каждая поисковая система переживает периоды зарождения, расцвета и упадка. Не бойтесь отказаться от использования любимой, но устаревающей поисковой системы и перейти на использование новых поисковых инструментов, обладающих большей эффективностью.</p>
+<p>Поисковая машина – это поисковый сервер, на котором установлена специальная программа, выполняющая автоматический поиск информационных ресурсов по ключевым словам в заголовках и тексте Web-страниц. Директории обеспечивают контекстный поиск, тогда как поисковые машины не обеспечивают контекста, однако позволяют находить конкретные слова или фразы. Их можно сравнить с оглавлением книги, а поисковые машины – с предметным указателем [4]. </p>
+<p>Существует большое число поисковых машин (Google, Yandex, AltaVista и др.), которые в ответ на запрос пользователя, сформированный в контекстной форме, т.е. в виде набора слов и словосочетаний, возвращают набор ссылок на документы, содержащие данные слова и словосочетания. Для повышения удобства формирования запросов большинством поисковых машин предоставляется возможность использования в запросах операций (конъюнкции, дизъюнкции, отрицания и др.). </p>
+<p>Существует два основных метода поиска информации в Интернет – с использованием поисковой машины или с использованием каталога. При этом сам механизм поиска в обоих случаях практически одинаков. Различия возникают на этапе 2 (составление списка ключевых слов). Для поисковой машины – это составление списка ключевых слов, а для каталога на этом этапе производится определение тематики разделов, в которых может находиться необходимая информация.</p>
+<p>На основе предварительно полученной информации о предмете поиска составьте максимально широкий набор ключевых слов в виде отдельных терминов, словосочетаний, названий и фамилий, тесно связанных с проблемой, профессиональной лексики.</p>
+<p>Естественный язык запросов привлекает своей простотой, однако, как показывает практика, он менее эффективен при серьезном поиске, когда ставится задача найти все или большинство документов на заданную тему.</p>
+<p>Стоит отметить, что поисковая машина обычно производит сортировку документов по принципу релевантности. При индексации документов поисковые машины высчитывают так называемый "вес" слова на странице – соотношение количества повторов на странице заданного слова к общему количеству слов на странице документа. Если задается запрос, состоящий из нескольких слов, то более релевантными будут документы, в которых совокупный вес слов будет максимальный. Однако, при подсчете веса не учитывается, рядом или раздельно стоят данные слова, и поэтому нет гарантий, что в первых документах содержится максимальное количество повторений словосочетания. Вполне возможно, что такого словосочетания там вообще не будет. На сервере поисковой машины текст разбивается на отдельные слова. Каждому из них присваиваются координаты, вычисляется его расположение относительно других слов на странице, и оно заносится в таблицу сервера вместе со ссылкой на тот адрес Интернета, где текст размещался в момент посещения пауком. </p>
+<p>Сам по себе сервер поисковой машины представляет собой большую локальную сеть, состоящую из мощных компьютеров с огромным объемом дисковой памяти. Они разделены на подгруппы (так называемые кластеры), между которыми распределяется информация. Когда поисковая система получает запрос, она ищет ответ именно в своей таблице, а не в Интернете.  Не смотря на наличие большого числа функций, призванных облегчить и ускорить процедуру поиска информации в Интернет, основной проблемой, возникающей при использовании широко известных поисковых машин, является относительно низкая релевантность возвращаемых ссылок, вследствие чего пользователю дополнительно необходимо просматривать большое число документов. Причины кроются в многовариатности человеческого языка, возможности использования синонимов, отсутствии полноценных средств настройки средств поиска для конкретной предметной области, интересующей пользователя. </p>
+<p>Таким образом, база данных, создаваемая поисковой машиной, фактически хранит сведения о том, в каких Web-документах содержаться те или иные слова. В отличие от тематических каталогов, поисковые машины охватывают до 25 % общего Web-пространства. </p>
+<p>Выдача результатов осуществляется с помощью специального модуля, который производит интеллектуальное ранжирование результатов. При этом берется в расчет местоположение термина в документе (название, заголовок, основной текст), частота его повторения, процентное соотношение искомого термина к остальному тексту cтpaницы, a тaкжe чиcлo и aвтopитeтнocть внeшних ccылoк нa дaнную cтpаницу c дpугих caйтoв. </p>
+<p>Однако у поисковых машин существуют некоторые недостатки: ограниченная область поиска. Если какой - либо сайт не был внесен в бaзу дaнных пoиcкoвoй мaшины, oн для нее не «существует», и его документы в результаты поиска попасть не могут; относительная сложность использования. Для того чтобы составленный запрос на поиск точно соответствовал тому, что именно требуется найти, нужно хотя бы немного представлять, как работает поисковая машинам, и уметь использовать простейшие логические операторы. Поисковые каталоги в этом смысле проще и привычнее; менее наглядная форма представления результатов запроса. Каталог выдает название сайта с его краткой аннотацией и другой полезной информацией. Результаты работы пoиcкoвoй мaшины мeнee нaглядны; пocкoльку бaзу дaнных пoиcкoвoй мaшины пополняют программы - роботы, нечестные владельцы рекламных сайтов могут их «обмануть», из-за чего релевантность поиска может быть значительно снижена. </p>
+<p>Каталог Интернет-ресурсов – структурированный набор ссылок на сайты с кратким их описанием. Сайты внутри каталога разбиваются по темам, а внутри тем могут быть ранжированы или по индексу цитирования (как в каталогах Яндекса или Google), или по дате добавления, или по алфавиту, или по другому параметру. Это один из старейших сервисов Интернета. Подавляющее большинство рейтингов посещаемости ресурсов имеют классификатор сайтов, но ранжирование всегда основано на посещаемости сайтов. В зависимости от широты тематики ссылок каталоги могут быть общими и специализированными (тематическими). </p>
+<p>Тематический каталог представляет пользователю некоторую древовидную структуру категорий (разделов и подразделов), на верхнем уровне которой собраны самые общие понятия, такие как Наука, Искусство, Бизнес и т. п., а элементы самого нижнего уровня представляют собой ссылки на отдельные Web-страницы и серверы вместе с кратким описанием их содержимого. По этому иерархическому каталогу можно путешествовать, начиная с более общих категорий (понятий) к более узким, специализированным [4]. </p>
+<p>К наиболее популярным каталогам информационных ресурсов относятся:</p>
+<p align="left">‒ Google(<a href="https://www.google.by/?gfe_rd=cr&ei=boJVVsDAJcyCNKDupvAP&gws_rd=ssl">www.google.com</a>);</p>
+<p align="left">‒ DMOZ. Каталог(<a href="https://dmoz-odp.org">www.dmoz-odp.ru</a>);</p>
+<p align="left">‒ Yandex(<a href="https://www.yandex.by/">www.yandex.ru</a>);</p>
+<p align="left">‒ Rambler'sTop100(<a href="http://www.rambler.ru/">www.rambler.ru</a>);</p>
+<p align="left">‒ Yahoo! Directory.(<a href="http://au.dir.yahoo.com">www.Yahoo.ru</a>)</p>
+
+<p>Большинство каталогов сoздaются путeм дoбaвлeния aвтopaми wеb-cтpaниц cвoeгo сaйтa к сущecтвующeму списку ссылок. Классифицировать каталоги информационных ресурсов можно по различным критериям, например целевому назначению, по характеру содержания, национально-территориальному признаку, по сферам их использования.</p>
+<p>Обычно на главной странице каталога информационных ресурсов размещены базовые разделы рубрикатора. Рубрикатор имеет иерархическую структуру, позволяющую наиболее точно классифицировать ресурсы по их тематической направленности. Таким образом, несмотря на всю полезность тематических каталогов, использование только поисковых систем этого вида часто оказывается явно недостаточным. В ходе отбора некоторые сайты могут быть не включены в каталог, даже если они и хорошо подпадают под какую-то тему, из-за субъективности отдельных редакторов. У разных каталогов нет общих стандартов каталогизации, в результате информация по нужной теме в разных каталогах может находиться под разными более обширными темами. Поэтому часто бывает очень сложно найти местоположение нужной темы [5]. </p>
+<p>Преимущества предметных каталогов - поскольку предметный каталог позволяет сразу выделять из огромных ресурсов сети нужную информацию, то исчезает необходимость задавать в поисковой машине высокоспецифические для поиска ключевые слова и, тем самым, облегчается поиск. Организация информации в виде каталога является привычной, логически очевидной и поэтому для начинающего пользователя Интернета служит удобной стартовой площадкой.</p>
+<p>Недостатки предметных каталогов - поскольку каталог формируется не автоматически, а авторским коллективом, то в итоге перечень сайтов и Веб-страниц оказывается менее полным, а материалы менее свежими, чем в аналогичных разделах автоматизированных поисковых машин, работающих по ключевым словам или фразам.</p>
+<p>По приведенной выше причине производить поиск по какой-то узкой теме или при поиске ответа на конкретный вопрос может оказаться невыгодно. Возникает необходимость использовать поисковые машины для поиска информации в Интернете.</p>
+
+    
+        </tr>
+  </tbody>
+</table>
+</body>
+</html>
