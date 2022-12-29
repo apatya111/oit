@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
-<style type="text/css">
+
 <!--
 body {
 	line-height: 1.2;
@@ -154,7 +153,6 @@ a:active {
 <![endif]-->
 <meta name="" content="">
 <meta name="keywords" content="Иванов Д.А.">
-<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/artifika:n4:default;modern-antiqua:n4:default;marvel:n4:default;ubuntu-mono:n4:default;medula-one:n4:default.js" type="text/javascript"></script>
 </head>
 
 <body text="#e8ff3e">
