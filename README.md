@@ -19,5 +19,6 @@
     
   </tbody>
 </table>
+<div align="center"><a href="MAIN PAGE.html">Главная</a></div>
 </body>
 </html>
