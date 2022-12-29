@@ -61,15 +61,10 @@ header {
 	background-color: #ADB96E;
 }
 /* ~~ These are the columns for the layout. ~~ 
-
 1) Padding is only placed on the top and/or bottom of the block elements. The elements within these blocks have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the block itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the block element and place a second block element within it with no width and the padding necessary for your design.
-
 2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a block set to float right). Many times, padding can be used instead. For blocks where this rule must be broken, you should add a "display:inline" declaration to the block element's rule to tame a bug where some versions of Internet Explorer double the margin.
-
 3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar blocks could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
-
 4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the blocks around in the HTML source.
-
 */
 .sidebar1 {
 	float: left;
@@ -156,14 +151,10 @@ a:active {
 -->
 
 #sidebar { 
-    width: 150px; background: #ECF5E4; border-right: 1px solid #231F20;
+    width: 150px;
     top: 82px; /* Расстояние от верхнего края */ 
     bottom: 0; /* Расстояние снизу  */
-   }
-   #content {
-    top: 5px; /* Расстояние от верхнего края */
-    left: 170px; /* Расстояние от левого края */ 
-    bottom: 0; right: 0;
+position: fixed;
    }
 
 
@@ -186,7 +177,7 @@ a:active {
 <p><a href="4.html">Заключение</a></p>
 <p><a href="5.html">Список источников</a></p>
   </div>
-<div id="content">
+
 <table width="912" border="1" align="center">
   <tbody>
     <tr>
@@ -195,8 +186,8 @@ a:active {
     
     <tr>
       <td height="1900"><table width="904" border="1">
-<p>ГЛАВА 2 ПОИСК ИНФОРМАЦИИ. АНАЛИТИЧЕСКИЙ ОБЗОР НАЙДЕННЫХ ДОКУМЕНТОВ </p>
-<p>При поиске информации по теме «Веб-сервис для работы с реестром поставщиков и реализуемых ими товарами» были использованы такие поисковые машины как http://www.google.com.by/, http://www.yandex.ru/, http://www.mail.ru/. Также был использован режим «расширенный поиск», который имеет каждая из названных поисковых систем.</p>
+	  <p>ГЛАВА 2 ПОИСК ИНФОРМАЦИИ. АНАЛИТИЧЕСКИЙ ОБЗОР НАЙДЕННЫХ ДОКУМЕНТОВ </p>
+      <p>При поиске информации по теме «Веб-сервис для работы с реестром поставщиков и реализуемых ими товарами» были использованы такие поисковые машины как http://www.google.com.by/, http://www.yandex.ru/, http://www.mail.ru/. Также был использован режим «расширенный поиск», который имеет каждая из названных поисковых систем.</p>
       <p>В качестве ключевых слов сначала вводилась полностью тема, потом более узко, например, «веб-сервис для работы с реестром предприятий», «реестр поставщиков». </p>
       <p>Аналитический обзор найденных документов по теме «Веб-сервис для работы с реестром поставщиков и реализуемых ими товарами». </p>
       <p>1.	<a href="https://cyberleninka.ru/article/n/problemy-integratsii-web-servisov-dlya-predpriyatiy-malogo-biznesa">Ссылка </a></p>
@@ -208,8 +199,9 @@ a:active {
       <p>3.	<a href="https://cyberleninka.ru/article/n/integratsiya-predpriyatiy-sotsialnogo-obespecheniya-v-edinoe-informatsionnoe-prostranstvo-sotsialnoy-zaschity-naseleniya-regiona">Ссылка </a></p>
       <p>Ломакин А.А. Интеграция предприятий социального обеспечения в единое информационное пространство социальной защиты населения региона: проблемы и перспективы развития </p>
       <p>В данной статье описывается процесс интеграции предприятий-поставщиков социальных изделий и услуг в единое информационное пространство социальной защиты региона. Разные предприятия выдвигают разные требования к процессу интеграции. Веб-интерфейс для сотрудников рассматривается в качестве интегратора предприятия в единое информационное пространство социальной защиты региона. Для крупных предприятий с современным программным обеспечением и собственным информационным пространством это не самый лучший подход. Универсальной основой для интеграции является сервис-
-ориентированная архитектура. Существующую тему интеграции предприятий-поставщиков предлагается расширить на основе сервис ориентированной архитектуры.</p>
-     <p>4.	<a href="https://cyberleninka.ru/article/n/komponentnaya-arhitektura-sistemy-dostupa-k-veb-servisam">Ссылка </a></p>
+ориентированная архитектура. Существующую тему интеграции предприятий-поставщиков предлагается расширить на основе сервис ориентированной архитектуры.
+ </p>
+      <p>4.	<a href="https://cyberleninka.ru/article/n/komponentnaya-arhitektura-sistemy-dostupa-k-veb-servisam">Ссылка </a></p>
       <p>Дергачев А.А., Дергачев А.М.  Компонентная архитектура системы доступа к веб-сервисам. – 2014 </p>
 	  <p>В статье представлена компонентная архитектура системы организации доступа к веб-сервисам. Разработано исполнительное ядро системы - процессор запросов к веб-сервисам. Реализован прототип типового решения проектирования и развертывания инфраструктуры управления веб-сервисами интернет-ориентированных информационно-вычислительных систем. Работа направлена на развитие исследований, проводимых в области формирования плана выполнения запросов к веб-сервисам - плана вызова веб-сервисов. Основными результатами работы являются: компонентная архитектура системы организации доступа к веб-сервисам, прототип типового решения проектирования – процессор запросов к веб-сервисам.</p>
       <p>5.	<a href="http://elar.uspu.ru/bitstream/uspu/13822/2/Andrianov.pdf">Ссылка </a></p>
@@ -233,9 +225,9 @@ a:active {
 	  <p>11. <a href="https://cyberleninka.ru/article/n/servisnye-sredstva-internet-dlya-resheniya-biznes-zadach">Ссылка </a></p>
       <p>Лаврищева Е. М., Карпов Л. Е., Томилин А. Н. Сервисные средства Интернет для решения бизнес-задач. – 2015  </p>
       <p>Описываются различные виды сервисов и служб, используемых в современных программных и распределенных системах. Дается характеристика широко распространенных и внедренных в практику систем со спектром системных и функциональных сервисов. Рассмотрены модели сервисной, сервисно-компонентной архитектур и системы сервисной поддержки WCF для представления прикладных систем из готовых сервисов с целью решения бизнес-задач. Приведен пример решения бизнес задачи обработки данных в калькуляторе, реализованном с помощью сервисной службы WCF комплекса ИТК. </p>
-    			</tr>
-  		</tbody>
-	</table>
-  </div>
+       </tr>
+  </tbody>
+</table>
+
 </body>
 </html>
