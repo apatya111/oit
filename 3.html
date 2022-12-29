@@ -150,11 +150,18 @@ a:active {
 }
 -->
 
-#sidebar { 
+body { margin: 0; }
+   #sidebar, #con { position: absolute; } 
+   #sidebar, #con { overflow: auto; padding: 10px; }
+   #sidebar { 
     width: 150px;
     top: 82px; /* Расстояние от верхнего края */ 
     bottom: 0; /* Расстояние снизу  */
-position: fixed;
+   }
+   #con {
+    top: 0px; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
    }
 
 
@@ -177,7 +184,7 @@ position: fixed;
 <p><a href="4.html">Заключение</a></p>
 <p><a href="5.html">Список источников</a></p>
   </div>
-
+<div id="con">
 <table width="912" border="1" align="center">
   <tbody>
     <tr>
@@ -228,6 +235,6 @@ position: fixed;
        </tr>
   </tbody>
 </table>
-
+</div>
 </body>
 </html>
